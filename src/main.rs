@@ -3,6 +3,7 @@
 #[macro_use] extern crate rocket;
 
 mod routes;
+mod models;
 
 fn main() {
     rocket::ignite()
