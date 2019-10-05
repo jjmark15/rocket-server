@@ -9,8 +9,8 @@ mod models;
 fn main() {
     rocket::ignite()
     .mount("/api/user", routes![
-        routes::user::greeting::hello_world,
-        routes::user::greeting::create,
+        routes::user::hello_world,
+        routes::user::create,
         ])
     .launch();
 }
