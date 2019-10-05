@@ -5,5 +5,7 @@
 mod routes;
 
 fn main() {
-    rocket::ignite().mount("/", routes![routes::user::greeting::index]).launch();
+    rocket::ignite()
+    .mount("/", routes![routes::user::greeting::hello_world])
+    .launch();
 }

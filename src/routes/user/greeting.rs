@@ -1,5 +1,5 @@
 
 #[get("/")]
-pub fn index() -> &'static str {
+pub fn hello_world() -> &'static str {
     "Hello, world!"
 }
