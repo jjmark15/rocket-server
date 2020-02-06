@@ -4,13 +4,13 @@
 extern crate rocket;
 
 mod models;
-mod routes;
+mod web;
 
 fn main() {
     rocket::ignite()
         .mount(
             "/api/user",
-            routes![routes::user::hello_world, routes::user::create],
+            routes![web::routes::user::hello_world, web::routes::user::create],
         )
         .launch();
 }
