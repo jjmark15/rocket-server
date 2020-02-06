@@ -1,7 +1,6 @@
+use rocket_contrib::json::Json;
 
-use rocket_contrib::json::{Json};
-
-use crate::models::users::user::{User};
+use crate::models::users::user::User;
 
 #[get("/")]
 pub fn hello_world() -> &'static str {
