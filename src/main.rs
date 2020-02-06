@@ -7,10 +7,11 @@ mod models;
 mod web;
 
 fn main() {
+    rocket().launch();
+}
+
+fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount(
-            "/api/user",
-            routes![web::routes::user::hello_world, web::routes::user::create],
-        )
-        .launch();
+        .mount("/api/user", routes![web::routes::user::create])
+        .mount("/api/hello", routes!(web::routes::hello::hello_world))
 }
