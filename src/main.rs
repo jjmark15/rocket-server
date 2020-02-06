@@ -3,6 +3,8 @@
 #[macro_use]
 extern crate rocket;
 
+#[cfg(test)]
+mod functional_tests;
 mod models;
 mod web;
 
