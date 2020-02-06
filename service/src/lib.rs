@@ -9,5 +9,11 @@ mod web;
 pub fn rocket() -> rocket::Rocket {
     rocket::ignite()
         .mount("/api/user", routes![web::routes::user::create])
-        .mount("/api/tests.hello", routes!(web::routes::hello::hello_world))
+        .mount(
+            "/api/hello",
+            routes!(
+                web::routes::hello::hello_world,
+                web::routes::hello::hello_name
+            ),
+        )
 }
