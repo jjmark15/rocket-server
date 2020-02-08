@@ -16,4 +16,5 @@ pub fn rocket() -> rocket::Rocket {
                 web::routes::hello::hello_name
             ),
         )
+        .mount("/api/internal", routes![web::routes::internal::status])
 }
